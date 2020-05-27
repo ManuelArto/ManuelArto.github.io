@@ -29287,7 +29287,10 @@ this.a.x.m(0,"username",t)
 return t}}
 B.Z7.prototype={
 $1:function(a){var t=a.length
-return t===0||t<4||C.b.F(a," ")?"Username must be at least 4 characters long":null}}
+if(t===0)return"Username must not be empty"
+if(C.b.F(a," "))return"Username must no contain spaces"
+if(t<4)return"Username must be at least 4 characters long"
+return null}}
 B.Z8.prototype={
 $1:function(a){var t=J.kq(a)
 this.a.x.m(0,"email",t)
@@ -29302,7 +29305,10 @@ this.a.x.m(0,"password",t)
 return t}}
 B.Zb.prototype={
 $1:function(a){var t=a.length
-return t===0||t<4||C.b.F(a," ")?"Please enter at least 4 characters":null}}
+if(t===0)return"Password must not be empty"
+if(C.b.F(a," "))return"Password must no contain spaces"
+if(t<7)return"Password must be at least 7 characters long"
+return null}}
 B.Zc.prototype={
 $1:function(a){return a!=this.a.e.a.a?"Password doesn't match":null}}
 B.Zd.prototype={
